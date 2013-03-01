@@ -26,6 +26,8 @@
 		EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */; };
 		EF2AC7C816E0E5D200FE933E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7C716E0E5D200FE933E /* Post.m */; };
 		EF2AC7CB16E0E5D300FE933E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7CA16E0E5D300FE933E /* User.m */; };
+		EF2AC7D016E0F0F100FE933E /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7CF16E0F0F100FE933E /* PostsViewController.m */; };
+		EF2AC7D216E0F59200FE933E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7D116E0F59200FE933E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,9 @@
 		EF2AC7C716E0E5D200FE933E /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		EF2AC7C916E0E5D300FE933E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		EF2AC7CA16E0E5D300FE933E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EF2AC7CE16E0F0F100FE933E /* PostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostsViewController.h; sourceTree = "<group>"; };
+		EF2AC7CF16E0F0F100FE933E /* PostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostsViewController.m; sourceTree = "<group>"; };
+		EF2AC7D116E0F59200FE933E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2AC7D216E0F59200FE933E /* QuartzCore.framework in Frameworks */,
 				EF2AC7B116E0DCFE00FE933E /* CFNetwork.framework in Frameworks */,
 				EF2AC7AF16E0DCF500FE933E /* SystemConfiguration.framework in Frameworks */,
 				EF2AC7AD16E0DCF000FE933E /* Security.framework in Frameworks */,
@@ -137,6 +143,7 @@
 			children = (
 				EF2AC7BB16E0E2BF00FE933E /* ODRefreshControl */,
 				EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */,
+				EF2AC7D116E0F59200FE933E /* QuartzCore.framework */,
 				EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */,
 				EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */,
 				EF2AC7AC16E0DCF000FE933E /* Security.framework */,
@@ -155,7 +162,7 @@
 				EF2AC77B16E0D64300FE933E /* AppDelegate.h */,
 				EF2AC77C16E0D64300FE933E /* AppDelegate.m */,
 				EF2AC78C16E0D6A500FE933E /* Database */,
-				EF2AC79016E0D6B100FE933E /* UI */,
+				EF2AC7CD16E0F0DF00FE933E /* UI */,
 				EF2AC77316E0D64300FE933E /* Supporting Files */,
 			);
 			path = crud;
@@ -182,13 +189,6 @@
 				EF2AC7BF16E0E35E00FE933E /* Models */,
 			);
 			path = Database;
-			sourceTree = "<group>";
-		};
-		EF2AC79016E0D6B100FE933E /* UI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = UI;
 			sourceTree = "<group>";
 		};
 		EF2AC79916E0DC8900FE933E /* Products */ = {
@@ -221,6 +221,15 @@
 				EF2AC7CA16E0E5D300FE933E /* User.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		EF2AC7CD16E0F0DF00FE933E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC7CE16E0F0F100FE933E /* PostsViewController.h */,
+				EF2AC7CF16E0F0F100FE933E /* PostsViewController.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +341,7 @@
 				EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */,
 				EF2AC7C816E0E5D200FE933E /* Post.m in Sources */,
 				EF2AC7CB16E0E5D300FE933E /* User.m in Sources */,
+				EF2AC7D016E0F0F100FE933E /* PostsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

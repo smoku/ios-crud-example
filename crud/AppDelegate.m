@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "PostsViewController.h"
 #import "User.h"
 #import "Post.h"
 
@@ -17,9 +18,18 @@
     [self configureRestKit];
     [self configureMapping];
     
+    PostsViewController *postsViewController = [[PostsViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *postsNavigationViewController = [[UINavigationController alloc] initWithRootViewController:postsViewController];
+    
+    UIViewController *secondViewController = [[UIViewController alloc] init];
+    [secondViewController setTitle:@"Users"];
+    [secondViewController.view setBackgroundColor:[UIColor whiteColor]];
+    
+    self.tabBarController = [[UITabBarController alloc] init];
+    [self.tabBarController setViewControllers:@[postsNavigationViewController, secondViewController]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController:self.tabBarController];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -54,7 +64,7 @@
 #pragma mark - Helpers
 
 - (void)configureRestKit {
-    NSURL *baseURL = [NSURL URLWithString:@"http://localhost:3000/api"];
+    NSURL *baseURL = [NSURL URLWithString:@"http://localhost:3000/"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
     [[objectManager HTTPClient] setDefaultHeader:@"Accept" value:@"application/json"];
     
@@ -78,7 +88,7 @@
 
 - (void)configureMapping {
     // Configure mappings
-    RKEntityMapping *userMapping = [RKEntityMapping mappingForClass:[User class]];
+    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"User" inManagedObjectStore:[RKManagedObjectStore defaultStore]];
     [userMapping setIdentificationAttributes:@[@"guid"]];
     [userMapping addAttributeMappingsFromDictionary:@{
         @"id": @"guid",
@@ -86,7 +96,7 @@
         @"last_name": @"lastName"
     }];
     
-    RKEntityMapping *postMapping = [RKEntityMapping mappingForClass:[Post class]];
+    RKEntityMapping *postMapping = [RKEntityMapping mappingForEntityForName:@"Post" inManagedObjectStore:[RKManagedObjectStore defaultStore]];
     [postMapping setIdentificationAttributes:@[@"guid"]];
     [postMapping addAttributeMappingsFromDictionary:@{
         @"id": @"guid",
@@ -94,8 +104,7 @@
         @"body": @"body",
         @"user_id": @"userGuid",
     }];
-    [postMapping addRelationshipMappingWithSourceKeyPath:@"user" mapping:userMapping];
-    [postMapping addConnectionForRelationship:@"user" connectedBy:@"userGuid"];
+    [postMapping addConnectionForRelationship:@"user" connectedBy:@{@"userGuid": @"guid"}];
 
     RKDynamicMapping *referenceMapping = [[RKDynamicMapping alloc] init];
     [referenceMapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"type" expectedValue:@"User" objectMapping:userMapping]];
