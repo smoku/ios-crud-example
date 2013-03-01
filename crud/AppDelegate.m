@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
+#import "Post.h"
 
 @implementation AppDelegate
 
@@ -75,7 +77,42 @@
 }
 
 - (void)configureMapping {
+    // Configure mappings
+    RKEntityMapping *userMapping = [RKEntityMapping mappingForClass:[User class]];
+    [userMapping setIdentificationAttributes:@[@"guid"]];
+    [userMapping addAttributeMappingsFromDictionary:@{
+        @"id": @"guid",
+        @"first_name": @"firstName",
+        @"last_name": @"lastName"
+    }];
     
+    RKEntityMapping *postMapping = [RKEntityMapping mappingForClass:[Post class]];
+    [postMapping setIdentificationAttributes:@[@"guid"]];
+    [postMapping addAttributeMappingsFromDictionary:@{
+        @"id": @"guid",
+        @"title": @"title",
+        @"body": @"body",
+        @"user_id": @"userGuid",
+    }];
+    [postMapping addRelationshipMappingWithSourceKeyPath:@"user" mapping:userMapping];
+    [postMapping addConnectionForRelationship:@"user" connectedBy:@"userGuid"];
+
+    RKDynamicMapping *referenceMapping = [[RKDynamicMapping alloc] init];
+    [referenceMapping addMatcher:[RKObjectMappingMatcher matcherWithKeyPath:@"type" expectedValue:@"User" objectMapping:userMapping]];
+    
+    
+    // Hook mappings to response key paths
+    RKResponseDescriptor *postsDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:postMapping
+                                                                                   pathPattern:nil
+                                                                                       keyPath:@"posts"
+                                                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    RKResponseDescriptor *referencesDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:referenceMapping
+                                                                                   pathPattern:nil
+                                                                                       keyPath:@"references"
+                                                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    [[RKObjectManager sharedManager] addResponseDescriptorsFromArray:@[postsDescriptor, referencesDescriptor]];
 }
 
 @end

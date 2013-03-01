@@ -24,6 +24,8 @@
 		EF2AC7AF16E0DCF500FE933E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */; };
 		EF2AC7B116E0DCFE00FE933E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */; };
 		EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */; };
+		EF2AC7C816E0E5D200FE933E /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7C716E0E5D200FE933E /* Post.m */; };
+		EF2AC7CB16E0E5D300FE933E /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7CA16E0E5D300FE933E /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,10 @@
 		EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		EF2AC7BC16E0E2BF00FE933E /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		EF2AC7C616E0E5D200FE933E /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		EF2AC7C716E0E5D200FE933E /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
+		EF2AC7C916E0E5D300FE933E /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EF2AC7CA16E0E5D300FE933E /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				EF2AC78D16E0D6A500FE933E /* crud.xcdatamodeld */,
+				EF2AC7BF16E0E35E00FE933E /* Models */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -203,6 +210,17 @@
 			);
 			name = ODRefreshControl;
 			path = Frameworks/ODRefreshControl;
+			sourceTree = "<group>";
+		};
+		EF2AC7BF16E0E35E00FE933E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC7C616E0E5D200FE933E /* Post.h */,
+				EF2AC7C716E0E5D200FE933E /* Post.m */,
+				EF2AC7C916E0E5D300FE933E /* User.h */,
+				EF2AC7CA16E0E5D300FE933E /* User.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +330,8 @@
 				EF2AC77D16E0D64300FE933E /* AppDelegate.m in Sources */,
 				EF2AC78F16E0D6A500FE933E /* crud.xcdatamodeld in Sources */,
 				EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */,
+				EF2AC7C816E0E5D200FE933E /* Post.m in Sources */,
+				EF2AC7CB16E0E5D300FE933E /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
