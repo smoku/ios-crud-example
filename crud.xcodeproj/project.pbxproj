@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF2AC76B16E0D64300FE933E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC76A16E0D64300FE933E /* UIKit.framework */; };
+		EF2AC76D16E0D64300FE933E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC76C16E0D64300FE933E /* Foundation.framework */; };
+		EF2AC76F16E0D64300FE933E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC76E16E0D64300FE933E /* CoreGraphics.framework */; };
+		EF2AC77116E0D64300FE933E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC77016E0D64300FE933E /* CoreData.framework */; };
+		EF2AC77716E0D64300FE933E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF2AC77516E0D64300FE933E /* InfoPlist.strings */; };
+		EF2AC77916E0D64300FE933E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC77816E0D64300FE933E /* main.m */; };
+		EF2AC77D16E0D64300FE933E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC77C16E0D64300FE933E /* AppDelegate.m */; };
+		EF2AC77F16E0D64300FE933E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2AC77E16E0D64300FE933E /* Default.png */; };
+		EF2AC78116E0D64300FE933E /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2AC78016E0D64300FE933E /* Default@2x.png */; };
+		EF2AC78316E0D64300FE933E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF2AC78216E0D64300FE933E /* Default-568h@2x.png */; };
+		EF2AC78F16E0D6A500FE933E /* crud.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC78D16E0D6A500FE933E /* crud.xcdatamodeld */; };
+		EF2AC7A916E0DCDC00FE933E /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7A016E0DC8A00FE933E /* libRestKit.a */; };
+		EF2AC7AB16E0DCE800FE933E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AA16E0DCE800FE933E /* MobileCoreServices.framework */; };
+		EF2AC7AD16E0DCF000FE933E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AC16E0DCF000FE933E /* Security.framework */; };
+		EF2AC7AF16E0DCF500FE933E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */; };
+		EF2AC7B116E0DCFE00FE933E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF2AC79F16E0DC8A00FE933E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		EF2AC7A116E0DC8A00FE933E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		EF2AC7A316E0DC8A00FE933E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		EF2AC7A516E0DC8A00FE933E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		EF2AC7A716E0DCD700FE933E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF2AC76716E0D64300FE933E /* crud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = crud.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2AC76A16E0D64300FE933E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EF2AC76C16E0D64300FE933E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EF2AC76E16E0D64300FE933E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EF2AC77016E0D64300FE933E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EF2AC77416E0D64300FE933E /* crud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "crud-Info.plist"; sourceTree = "<group>"; };
+		EF2AC77616E0D64300FE933E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF2AC77816E0D64300FE933E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF2AC77A16E0D64300FE933E /* crud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "crud-Prefix.pch"; sourceTree = "<group>"; };
+		EF2AC77B16E0D64300FE933E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF2AC77C16E0D64300FE933E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF2AC77E16E0D64300FE933E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EF2AC78016E0D64300FE933E /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EF2AC78216E0D64300FE933E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EF2AC78E16E0D6A500FE933E /* crud.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = crud.xcdatamodel; sourceTree = "<group>"; };
+		EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Frameworks/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		EF2AC7AA16E0DCE800FE933E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EF2AC7AC16E0DCF000FE933E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF2AC76416E0D64300FE933E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2AC7B116E0DCFE00FE933E /* CFNetwork.framework in Frameworks */,
+				EF2AC7AF16E0DCF500FE933E /* SystemConfiguration.framework in Frameworks */,
+				EF2AC7AD16E0DCF000FE933E /* Security.framework in Frameworks */,
+				EF2AC7AB16E0DCE800FE933E /* MobileCoreServices.framework in Frameworks */,
+				EF2AC7A916E0DCDC00FE933E /* libRestKit.a in Frameworks */,
+				EF2AC76B16E0D64300FE933E /* UIKit.framework in Frameworks */,
+				EF2AC76D16E0D64300FE933E /* Foundation.framework in Frameworks */,
+				EF2AC76F16E0D64300FE933E /* CoreGraphics.framework in Frameworks */,
+				EF2AC77116E0D64300FE933E /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF2AC75E16E0D64300FE933E = {
+			isa = PBXGroup;
+			children = (
+				EF2AC77216E0D64300FE933E /* crud */,
+				EF2AC76916E0D64300FE933E /* Frameworks */,
+				EF2AC76816E0D64300FE933E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF2AC76816E0D64300FE933E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC76716E0D64300FE933E /* crud.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF2AC76916E0D64300FE933E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */,
+				EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */,
+				EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */,
+				EF2AC7AC16E0DCF000FE933E /* Security.framework */,
+				EF2AC7AA16E0DCE800FE933E /* MobileCoreServices.framework */,
+				EF2AC76A16E0D64300FE933E /* UIKit.framework */,
+				EF2AC76C16E0D64300FE933E /* Foundation.framework */,
+				EF2AC76E16E0D64300FE933E /* CoreGraphics.framework */,
+				EF2AC77016E0D64300FE933E /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF2AC77216E0D64300FE933E /* crud */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC77B16E0D64300FE933E /* AppDelegate.h */,
+				EF2AC77C16E0D64300FE933E /* AppDelegate.m */,
+				EF2AC78C16E0D6A500FE933E /* Database */,
+				EF2AC79016E0D6B100FE933E /* UI */,
+				EF2AC77316E0D64300FE933E /* Supporting Files */,
+			);
+			path = crud;
+			sourceTree = "<group>";
+		};
+		EF2AC77316E0D64300FE933E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC77416E0D64300FE933E /* crud-Info.plist */,
+				EF2AC77516E0D64300FE933E /* InfoPlist.strings */,
+				EF2AC77816E0D64300FE933E /* main.m */,
+				EF2AC77A16E0D64300FE933E /* crud-Prefix.pch */,
+				EF2AC77E16E0D64300FE933E /* Default.png */,
+				EF2AC78016E0D64300FE933E /* Default@2x.png */,
+				EF2AC78216E0D64300FE933E /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF2AC78C16E0D6A500FE933E /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC78D16E0D6A500FE933E /* crud.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		EF2AC79016E0D6B100FE933E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		EF2AC79916E0DC8900FE933E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC7A016E0DC8A00FE933E /* libRestKit.a */,
+				EF2AC7A216E0DC8A00FE933E /* RestKitTests.octest */,
+				EF2AC7A416E0DC8A00FE933E /* RestKit.framework */,
+				EF2AC7A616E0DC8A00FE933E /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF2AC76616E0D64300FE933E /* crud */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF2AC78916E0D64300FE933E /* Build configuration list for PBXNativeTarget "crud" */;
+			buildPhases = (
+				EF2AC76316E0D64300FE933E /* Sources */,
+				EF2AC76416E0D64300FE933E /* Frameworks */,
+				EF2AC76516E0D64300FE933E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF2AC7A816E0DCD700FE933E /* PBXTargetDependency */,
+			);
+			name = crud;
+			productName = crud;
+			productReference = EF2AC76716E0D64300FE933E /* crud.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF2AC75F16E0D64300FE933E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = GeoRun;
+			};
+			buildConfigurationList = EF2AC76216E0D64300FE933E /* Build configuration list for PBXProject "crud" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EF2AC75E16E0D64300FE933E;
+			productRefGroup = EF2AC76816E0D64300FE933E /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EF2AC79916E0DC8900FE933E /* Products */;
+					ProjectRef = EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				EF2AC76616E0D64300FE933E /* crud */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EF2AC7A016E0DC8A00FE933E /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = EF2AC79F16E0DC8A00FE933E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EF2AC7A216E0DC8A00FE933E /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = EF2AC7A116E0DC8A00FE933E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EF2AC7A416E0DC8A00FE933E /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = EF2AC7A316E0DC8A00FE933E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EF2AC7A616E0DC8A00FE933E /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = EF2AC7A516E0DC8A00FE933E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF2AC76516E0D64300FE933E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2AC77716E0D64300FE933E /* InfoPlist.strings in Resources */,
+				EF2AC77F16E0D64300FE933E /* Default.png in Resources */,
+				EF2AC78116E0D64300FE933E /* Default@2x.png in Resources */,
+				EF2AC78316E0D64300FE933E /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF2AC76316E0D64300FE933E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF2AC77916E0D64300FE933E /* main.m in Sources */,
+				EF2AC77D16E0D64300FE933E /* AppDelegate.m in Sources */,
+				EF2AC78F16E0D6A500FE933E /* crud.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF2AC7A816E0DCD700FE933E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = EF2AC7A716E0DCD700FE933E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF2AC77516E0D64300FE933E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF2AC77616E0D64300FE933E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF2AC78716E0D64300FE933E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF2AC78816E0D64300FE933E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF2AC78A16E0D64300FE933E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "crud/crud-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				INFOPLIST_FILE = "crud/crud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EF2AC78B16E0D64300FE933E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "crud/crud-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				INFOPLIST_FILE = "crud/crud-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF2AC76216E0D64300FE933E /* Build configuration list for PBXProject "crud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2AC78716E0D64300FE933E /* Debug */,
+				EF2AC78816E0D64300FE933E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF2AC78916E0D64300FE933E /* Build configuration list for PBXNativeTarget "crud" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF2AC78A16E0D64300FE933E /* Debug */,
+				EF2AC78B16E0D64300FE933E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF2AC78D16E0D6A500FE933E /* crud.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF2AC78E16E0D6A500FE933E /* crud.xcdatamodel */,
+			);
+			currentVersion = EF2AC78E16E0D6A500FE933E /* crud.xcdatamodel */;
+			path = crud.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EF2AC75F16E0D64300FE933E /* Project object */;
+}
