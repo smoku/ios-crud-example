@@ -122,6 +122,17 @@
                                                                                    statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     
     [[RKObjectManager sharedManager] addResponseDescriptorsFromArray:@[postsDescriptor, referencesDescriptor]];
+    
+    
+    // Delete cached objects if they are not in JSON response
+    [[RKObjectManager sharedManager] addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
+        if ([[URL path] isEqualToString:@"/api/posts"]) {
+            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Post"];
+            return fetchRequest;
+        }
+
+        return nil;
+    }];
 }
 
 @end
