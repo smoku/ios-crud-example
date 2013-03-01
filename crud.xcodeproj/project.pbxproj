@@ -23,6 +23,7 @@
 		EF2AC7AD16E0DCF000FE933E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AC16E0DCF000FE933E /* Security.framework */; };
 		EF2AC7AF16E0DCF500FE933E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */; };
 		EF2AC7B116E0DCFE00FE933E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */; };
+		EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		EF2AC7AC16E0DCF000FE933E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EF2AC7BC16E0E2BF00FE933E /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
+		EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 		EF2AC76916E0D64300FE933E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF2AC7BB16E0E2BF00FE933E /* ODRefreshControl */,
 				EF2AC79816E0DC8900FE933E /* RestKit.xcodeproj */,
 				EF2AC7B016E0DCFE00FE933E /* CFNetwork.framework */,
 				EF2AC7AE16E0DCF500FE933E /* SystemConfiguration.framework */,
@@ -189,6 +193,16 @@
 				EF2AC7A616E0DC8A00FE933E /* RestKitFrameworkTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EF2AC7BB16E0E2BF00FE933E /* ODRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				EF2AC7BC16E0E2BF00FE933E /* ODRefreshControl.h */,
+				EF2AC7BD16E0E2BF00FE933E /* ODRefreshControl.m */,
+			);
+			name = ODRefreshControl;
+			path = Frameworks/ODRefreshControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 				EF2AC77916E0D64300FE933E /* main.m in Sources */,
 				EF2AC77D16E0D64300FE933E /* AppDelegate.m in Sources */,
 				EF2AC78F16E0D6A500FE933E /* crud.xcdatamodeld in Sources */,
+				EF2AC7BE16E0E2BF00FE933E /* ODRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
