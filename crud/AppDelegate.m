@@ -64,7 +64,8 @@
 #pragma mark - Helpers
 
 - (void)configureRestKit {
-    NSURL *baseURL = [NSURL URLWithString:@"http://localhost:3000/"];
+    // Use JSON stored in dropbox instead of API
+    NSURL *baseURL = [NSURL URLWithString:@"https://dl.dropbox.com/"];
     RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
     [[objectManager HTTPClient] setDefaultHeader:@"Accept" value:@"application/json"];
     
@@ -126,12 +127,8 @@
     
     // Delete cached objects if they are not in JSON response
     [[RKObjectManager sharedManager] addFetchRequestBlock:^NSFetchRequest *(NSURL *URL) {
-        if ([[URL path] isEqualToString:@"/api/posts"]) {
-            NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Post"];
-            return fetchRequest;
-        }
-
-        return nil;
+        NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Post"];
+        return fetchRequest;
     }];
 }
 

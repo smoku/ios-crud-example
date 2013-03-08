@@ -472,6 +472,7 @@
 				EF2AC78B16E0D64300FE933E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

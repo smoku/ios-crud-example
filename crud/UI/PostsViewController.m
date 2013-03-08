@@ -48,12 +48,18 @@
 {
     [_refreshControl beginRefreshing];
     
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"api/posts" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    // Use JSON stored in dropbox instead of API
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"u/3183488/posts.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         [_refreshControl endRefreshing];
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         [_refreshControl endRefreshing];
-        NSLog(@"Load failed with error: %@", error);
     }];
+    
+    //[[RKObjectManager sharedManager] getObjectsAtPath:@"api/posts" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    //    [_refreshControl endRefreshing];
+    //} failure:^(RKObjectRequestOperation *operation, NSError *error) {
+    //    [_refreshControl endRefreshing];
+    //}];
 }
 
 #pragma mark - Table view data source
@@ -89,14 +95,14 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        Post *post = [_fetchResultsController objectAtIndexPath:indexPath];
-        NSString *resourcePath = [NSString stringWithFormat:@"api/posts/%@", post.guid];
-        [[RKObjectManager sharedManager] deleteObject:post path:resourcePath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-            
-            
-        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-            
-        }];
+//        Post *post = [_fetchResultsController objectAtIndexPath:indexPath];
+//        NSString *resourcePath = [NSString stringWithFormat:@"api/posts/%@", post.guid];
+//        [[RKObjectManager sharedManager] deleteObject:post path:resourcePath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+//            
+//            
+//        } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+//            
+//        }];
     }
 }
 
